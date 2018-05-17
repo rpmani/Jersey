@@ -1,0 +1,5 @@
+package com.pathparam.ws;
+
+public class TestPathParam {
+
+}

@@ -1,0 +1,20 @@
+package com.jersey.friends.controller;
+
+public class FriendsController {
+	
+	public void getAllFriends(){
+		
+	}
+
+	public void getAllFriendsById(){
+		
+	}
+	
+	public void updateFriends(){
+		
+	}
+
+	public void deleteFriends(){
+		
+	}
+}

@@ -1,0 +1,43 @@
+package com.jersey.friends.controller;
+
+import java.util.List;
+
+import javax.annotation.Generated;
+import javax.websocket.server.PathParam;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import com.jersey.friends.pojo.Friends;
+import com.jersey.friends.service.FriendCollectionService;
+
+@Path("/friends")
+public class FriendsController {
+	
+	FriendCollectionService friendCollectionService = new FriendCollectionService();
+	
+	@GET
+	@Path("/getAll")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List getAllFriends(){
+		List allFriends = friendCollectionService.getAllFriends();
+		return allFriends;
+		
+	}
+	@GET
+	@Path("/{id}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Friends getAllFriendsById(@PathParam("id") int id){
+		Friends friend =friendCollectionService.getFriendsById(id);
+		return friend;
+	}
+	
+	public void updateFriends(){
+		
+	}
+
+	public void deleteFriends(){
+		
+	}
+}
